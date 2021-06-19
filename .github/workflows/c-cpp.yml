@@ -17,6 +17,12 @@ jobs:
       run: ls -l
     - name: ls2
       run: ls -l /
+    - name: trypython
+      run: which python
+    - name: trygcc
+      run: which gcc
+    - name: trygcc2
+      run: gcc -v
     - name: configure
       run: ./configure
     - name: make
