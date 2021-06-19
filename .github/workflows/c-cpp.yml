@@ -22,7 +22,7 @@ jobs:
     - name: trygcc
       run: which gcc
     - name: trygcc2
-      run: gcc main.cpp
+      run: gcc -lm main.cpp
     - name: tryrun
       run: ./a.out
     - name: configure
