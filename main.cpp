@@ -19,7 +19,7 @@ int main(int argc, char**argv)
     double out = amplitude * sin(angle);
     int outint = (int)out;
     fprintf(f, "%d\n", outint);
-    angle += 2 * 31415927 * frequency * (1.0 / sampleRate);
+    angle += 2 * 3.1415927 * frequency * (1.0 / sampleRate);
     sampleCount++;
   }
   fclose(f);
