@@ -25,6 +25,11 @@ jobs:
       run: gcc main.cpp -lm
     - name: tryrun
       run: ./a.out
+    - name: archiveartifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: "kickartifacts"
+        path: kick.dat
     - name: configure
       run: ./configure
     - name: make
