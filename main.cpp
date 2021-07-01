@@ -9,7 +9,7 @@ int main(int argc, char**argv)
   double sampleRate = 44100.0;
   double amplitude = 10000.0;
   unsigned long sampleCount = 0;
-  unsigned long numSamples = 10; // 44100;
+  unsigned long numSamples = 44100;
   double angle = 0.0;
   FILE*f = fopen("kick.dat", "wb");
   while (sampleCount < numSamples)
