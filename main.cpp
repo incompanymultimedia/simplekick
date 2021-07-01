@@ -14,7 +14,7 @@ int main(int argc, char**argv)
   FILE*f = fopen("kick.dat", "wb");
   while (sampleCount < numSamples)
   {
-    double frequency = startFrequency + (endFrequency-startFrequency) * (sampleCount / numSamples);
+    double frequency = startFrequency + (endFrequency-startFrequency) * ((double)sampleCount / (double)numSamples);
     
     double out = amplitude * sin(angle);
     short outint = (short)out;
