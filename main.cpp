@@ -11,14 +11,14 @@ int main(int argc, char**argv)
   unsigned long sampleCount = 0;
   unsigned long numSamples = 10; // 44100;
   double angle = 0.0;
-  FILE*f = fopen("kick.dat", "w");
+  FILE*f = fopen("kick.dat", "wb");
   while (sampleCount < numSamples)
   {
     double frequency = startFrequency + (endFrequency-startFrequency) * (sampleCount / numSamples);
     
     double out = amplitude * sin(angle);
-    int outint = (int)out;
-    fprintf(f, "%d\n", outint);
+    short outint = (short)out;
+    fwrite(&outint, 1, sizeof(short), f);
     angle += 2 * 3.1415927 * frequency * (1.0 / sampleRate);
     sampleCount++;
   }
