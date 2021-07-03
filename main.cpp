@@ -1,3 +1,5 @@
+// InCompany Multimedia: Simple Kick Example
+
 #include <stdio.h>
 #include <math.h>
 
